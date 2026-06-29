@@ -87,10 +87,29 @@ This project demonstrates how embedded systems integrate sensors, actuators, and
  Servo Motor     LEDs       Buzzer
 ```
 ---
+## 📸 Project Gallery
+
+### 📷 Hardware Setup
+
+> *(Insert a photo of your complete Arduino circuit here.)*
+
+---
+
+### 🚪 Gate Closed
+
+> *(Insert a photo showing the gate in the closed position.)*
+
+---
+
+### 🚗 Gate Open
+
+> *(Insert a photo showing the gate opening after vehicle detection.)*
+
+---
 
 ### 💻 Wokwi Simulation
 
-> *(Insert a screenshot of your Wokwi simulation.)*
+> *( a screenshot of Wokwi simulation.)*
 
 
 
