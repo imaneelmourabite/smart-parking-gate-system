@@ -1,155 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Parking Gate System</title>
-</head>
+# 🚗 Smart Parking Gate System Using Arduino
 
-<body>
+> An embedded systems project that automates parking gate access using an Arduino Uno, an HC-SR04 ultrasonic sensor, and a servo motor.
 
-    <h1>🚗 Smart Parking Gate System Using Arduino</h1>
+---
 
-    <p>
-        <em>
-            An embedded systems project that automates parking gate access using an Arduino Uno,
-            an ultrasonic sensor, and a servo motor.
-        </em>
-    </p>
+## 📖 Overview
 
-    <hr>
+The **Smart Parking Gate System** is an embedded systems project developed as part of the **Embedded System Design** course at **Altınbaş University**.
 
-    <section>
-        <h2> Overview</h2>
+The project simulates an automated parking gate capable of detecting approaching vehicles and controlling a barrier gate without human intervention. An **HC-SR04 ultrasonic sensor** measures the distance to an object, while an **Arduino Uno** processes the sensor data and controls a **servo motor** to open or close the gate automatically.
 
-        <p>
-            The <strong>Smart Parking Gate System</strong> is an embedded systems project
-            developed as part of the
-            <strong>Embedded System Design</strong> course at
-            <strong>Altınbaş University</strong>.
-        </p>
+To improve user interaction, the system provides:
 
-        <p>
-            The system automatically detects approaching vehicles using an
-            <strong>HC-SR04 ultrasonic sensor</strong>. Once a vehicle enters the
-            detection range, an <strong>Arduino Uno</strong> processes the sensor
-            data and opens the parking gate by rotating a
-            <strong>servo motor</strong>. LEDs provide visual feedback, while a
-            buzzer alerts users during operation.
-        </p>
+- 🟢 Green LED indicating that the gate is open.
+- 🔴 Red LED indicating that the gate is closed.
+- 🔊 Buzzer notifications during gate operation.
 
-        <p>
-            The project demonstrates how embedded systems can automate real-world
-            processes through the interaction of sensors, actuators, and
-            microcontrollers.
-        </p>
-    </section>
+This project demonstrates how embedded systems integrate sensors, actuators, and microcontrollers to automate a real-world parking system.
 
-    <hr>
+---
 
-    <section>
+## ✨ Features
 
-        <h2>✨ Features</h2>
+- 🚗 Automatic vehicle detection
+- 🚪 Automatic gate opening and closing
+-  Real-time distance measurement
+-  Servo motor gate control
+- 🟢 Green and 🔴 Red LED status indicators
+-  Audible buzzer notification
+- 🔌 Physical hardware implementation
+- 💻 Wokwi simulation
 
-        <ul>
-            <li>Automatic vehicle detection</li>
-            <li>Automatic gate opening and closing</li>
-            <li>Ultrasonic distance measurement</li>
-            <li>Servo motor control</li>
-            <li>Green and red LED indicators</li>
-            <li>Audible buzzer notification</li>
-            <li>Physical hardware implementation</li>
-            <li>Wokwi simulation</li>
-        </ul>
+---
 
-    </section>
+## 🛠️ Technologies
 
-    <hr>
+### Hardware
 
-    <section>
+- Arduino Uno
+- HC-SR04 Ultrasonic Sensor
+- SG90 Servo Motor
+- Breadboard
+- Jumper Wires
+- LEDs
+- 220Ω Resistors
+- Buzzer
 
-        <h2>🛠 Technologies</h2>
+### Software
 
-        <h3>Hardware</h3>
+- Arduino IDE
+- C/C++
+- Wokwi Simulator
 
-        <ul>
-            <li>Arduino Uno</li>
-            <li>HC-SR04 Ultrasonic Sensor</li>
-            <li>SG90 Servo Motor</li>
-            <li>Breadboard</li>
-            <li>Jumper Wires</li>
-            <li>LEDs</li>
-            <li>Resistors</li>
-            <li>Buzzer</li>
-        </ul>
+---
 
-        <h3>Software</h3>
+## ⚙️ System Workflow
 
-        <ul>
-            <li>Arduino IDE</li>
-            <li>C/C++</li>
-            <li>Wokwi Simulator</li>
-        </ul>
+1. The ultrasonic sensor continuously measures the distance to an approaching object.
+2. The Arduino Uno processes the sensor readings.
+3. If an object is detected within **15 cm**:
+   - The servo motor opens the gate.
+   - The green LED turns **ON**.
+   - The buzzer is activated.
+4. Otherwise:
+   - The gate remains closed.
+   - The red LED turns **ON**.
+   - The buzzer is turned **OFF**.
 
-    </section>
+---
 
-    <hr>
+##  System Architecture
 
-    <section>
+```text
+                Vehicle
+                   │
+                   ▼
+      HC-SR04 Ultrasonic Sensor
+                   │
+                   ▼
+              Arduino Uno
+                   │
+            Decision Logic
+                   │
+      ┌────────────┼────────────┐
+      ▼            ▼            ▼
+ Servo Motor     LEDs       Buzzer
+```
+---
 
-        <h2>⚙️ System Workflow</h2>
+### 💻 Wokwi Simulation
 
-        <ol>
+> *(Insert a screenshot of your Wokwi simulation.)*
 
-            <li>The ultrasonic sensor continuously measures the distance.</li>
 
-            <li>Arduino processes the sensor readings.</li>
 
-            <li>
-                If an object is detected within <strong>15 cm</strong>:
-                <ul>
-                    <li>The servo motor opens the gate.</li>
-                    <li>The green LED turns ON.</li>
-                    <li>The buzzer activates.</li>
-                </ul>
-            </li>
+---
 
-            <li>
-                Otherwise:
-                <ul>
-                    <li>The gate remains closed.</li>
-                    <li>The red LED turns ON.</li>
-                    <li>The buzzer is OFF.</li>
-                </ul>
-            </li>
+##  Future Improvements
 
-        </ol>
+- RFID authentication
+- LCD display for user messages
+- Automatic parking space counter
+- Wi-Fi or Bluetooth connectivity
+- Mobile application integration
+- License plate recognition
+- Cloud-based monitoring dashboard
+- Finite State Machine (FSM) implementation
+- Improved power management
 
-    </section>
+---
 
-    <hr>
+## 📚 Concepts Demonstrated
 
-    <section>
+- Embedded Systems
+- Arduino Programming
+- Sensor Integration
+- Servo Motor Control
+- Digital Input/Output
+- PWM (Pulse Width Modulation)
+- Conditional Logic
+- Hardware Interfacing
+- Automation Systems
 
-        <h2>System Architecture</h2>
+---
 
-        <pre>
-Vehicle
-   │
-   ▼
-Ultrasonic Sensor
-   │
-   ▼
-Arduino Uno
-   │
-   ▼
-Decision Logic
-   │
-   ▼
-Servo Motor + LEDs + Buzzer
-        </pre>
+## 🎥 Demonstration
 
-    </section>
+The project has been successfully tested using both:
 
-</body>
-</html>
+- ✅ Physical Arduino hardware
+- ✅ Wokwi online simulation
