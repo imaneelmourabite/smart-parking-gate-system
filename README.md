@@ -20,7 +20,7 @@
     <hr>
 
     <section>
-        <h2>📖 Overview</h2>
+        <h2> Overview</h2>
 
         <p>
             The <strong>Smart Parking Gate System</strong> is an embedded systems project
@@ -131,7 +131,7 @@
 
     <section>
 
-        <h2>🏗 System Architecture</h2>
+        <h2>System Architecture</h2>
 
         <pre>
 Vehicle
@@ -153,4 +153,3 @@ Servo Motor + LEDs + Buzzer
 
 </body>
 </html>
-
